@@ -29,10 +29,10 @@ export default function Home() {
 
           <div>
             <p className="font-medium text-2xl text-pretty w-[420px]">
-              O EcoHub é uma plataforma dedicada a promover práticas
-              sustentáveis e conscientização ambiental.
-              <br /> Aqui você encontrar informações, recursos e comunidades
-              para ajudá-lo a adotar um estilo de vida mais ecológico.
+              O <span className="text-paleta-verde font-bold">EcoHub</span> é uma plataforma dedicada a promover <span className="text-paleta-verde font-bold">práticas
+              sustentáveis</span> e <span className="text-paleta-verde font-bold">conscientização ambiental.</span>
+              <br /> Aqui você encontrar <span className="text-paleta-verde font-bold">informações, recursos e comunidades</span>
+              para ajudá-lo a adotar um estilo de vida <span className="text-paleta-verde font-bold">mais ecológico.</span>
             </p>
           </div>
 
