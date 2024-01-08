@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSeedling } from "@fortawesome/free-solid-svg-icons";
+import { faUsers } from "@fortawesome/free-solid-svg-icons"
 
 export default function Home() {
   return (
@@ -43,6 +44,17 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* comumunity */}
+      <section className="h-screen bg-[url('/bg1.png')] bg-cover bg-center px-16 py-24 text-paleta-marrom flex flex-row gap-8">
+      <div>
+      <FontAwesomeIcon
+          icon={faUsers}
+          className="w-44 h-44"
+          style={{ color: "#795548" }}
+        ></FontAwesomeIcon>
+        </div>
+      </section>
+
     </main>
   );
 }
