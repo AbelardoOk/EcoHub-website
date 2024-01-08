@@ -18,6 +18,7 @@ const config: Config = {
           azul: "#2196F3",
           marrom: "#795548",
           cinza: "#9E9E9E",
+          bege: "#e6e7e2",
         },
       },
     },

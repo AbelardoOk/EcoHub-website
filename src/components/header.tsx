@@ -12,7 +12,7 @@ import {
 
 export function Header() {
   return (
-    <header className="bg-paleta-verde h-screen px-4 flex flex-col py-12 justify-between">
+    <header className="fixed bg-paleta-verde h-screen px-4 flex flex-col py-12 justify-between">
       <div className="flex flex-col gap-4">
         <FontAwesomeIcon
           icon={faHouse}
