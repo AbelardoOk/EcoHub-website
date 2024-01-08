@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Gluten, Roboto_Flex as Roboto } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const gluten = Gluten({ subsets: ["latin"], weight: ["900", "800", "700", "600"], variable: "--font-gluten" });
+const roboto = Roboto({ subsets: ["latin"], variable: "--font-roboto" });
 
 export const metadata: Metadata = {
   title: "EcoHub",
@@ -12,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR">
+      <body className={`${gluten.variable} ${roboto.variable} font-sans`}>{children}</body>
     </html>
   );
 }
