@@ -1,6 +1,7 @@
 "use client";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSeedling } from "@fortawesome/free-solid-svg-icons";
+import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -61,10 +62,23 @@ export default function Home() {
 
           <div>
             <p className="font-medium text-2xl text-pretty w-[420px]">
-              O EcoHub é uma plataforma dedicada a promover práticas
-              sustentáveis e conscientização ambiental.
-              <br /> Aqui você encontrar informações, recursos e comunidades
-              para ajudá-lo a adotar um estilo de vida mais ecológico.
+              O <span className="text-paleta-verde font-bold">EcoHub</span> é
+              uma plataforma dedicada a promover{" "}
+              <span className="text-paleta-verde font-bold">
+                práticas sustentáveis
+              </span>{" "}
+              e{" "}
+              <span className="text-paleta-verde font-bold">
+                conscientização ambiental.
+              </span>
+              <br /> Aqui você encontrar{" "}
+              <span className="text-paleta-verde font-bold">
+                informações, recursos e comunidades
+              </span>
+              para ajudá-lo a adotar um estilo de vida{" "}
+              <span className="text-paleta-verde font-bold">
+                mais ecológico.
+              </span>
             </p>
           </div>
 
@@ -91,9 +105,16 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* Comunidades locais */}
-      <section className="px-16 h-screen snap-start snap-always"></section>
+      {/* comumunity */}
+      <section className="h-screen bg-[url('/bg1.png')] bg-cover bg-center px-16 py-24 text-paleta-marrom flex flex-row gap-8">
+        <div>
+          <FontAwesomeIcon
+            icon={faUsers}
+            className="w-44 h-44"
+            style={{ color: "#795548" }}
+          ></FontAwesomeIcon>
+        </div>
+      </section>
     </main>
   );
 }
