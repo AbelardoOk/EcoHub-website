@@ -5,6 +5,7 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useWindowSize } from "rooks";
 
 export default function Home() {
   const NewsApiKey = "75e8a105404542e3b22d5ad043445276";
