@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 export default function Home() {
   const NewsApiKey = "75e8a105404542e3b22d5ad043445276";
   const NewsApiUrl = `https://newsapi.org/v2/top-headlines?country=br&apiKey=${NewsApiKey}&category=health`;
-  const [news, setNews] = useState("");
+  const [news, setNews] = useState([]);
 
   useEffect(() => {
     async function obterNoticias() {
@@ -34,9 +34,9 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="w-screen ml-16 bg-paleta-bege">
+    <main className="w-screen ml-16 bg-paleta-bege !scroll-smooth snap-y snap-mandatory">
       {/* Homepage */}
-      <section className="h-screen bg-[url('/bg1.png')] bg-cover px-16 bg-center py-24 text-paleta-marrom flex flex-row gap-8">
+      <section className="h-screen bg-[url('/bg1.png')] bg-cover px-16 bg-center py-24 text-paleta-marrom flex flex-row gap-8 snap-start snap-always">
         <div>
           <FontAwesomeIcon
             icon={faSeedling}
@@ -77,7 +77,7 @@ export default function Home() {
       </section>
 
       {/* Dicas sustentáveis */}
-      <section className="px-16 h-screen">
+      <section className="px-16 h-screen snap-start snap-always">
         <div>
           {/* Renderize as notícias aqui usando o estado 'news' */}
           {news.map((article: any, index: any) => (
@@ -93,7 +93,7 @@ export default function Home() {
       </section>
 
       {/* Comunidades locais */}
-      <section className="h-screen"></section>
+      <section className="px-16 h-screen snap-start snap-always"></section>
     </main>
   );
 }
