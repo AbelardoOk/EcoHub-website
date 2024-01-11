@@ -5,7 +5,7 @@ import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { useWindowSize } from "rooks";
+import { LogoIcon } from "../../public/logo";
 
 export default function Home() {
   const NewsApiKey = "75e8a105404542e3b22d5ad043445276";
@@ -39,22 +39,18 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="ml-16 w-screen snap-y snap-mandatory !scroll-smooth bg-paleta-bege">
+    <main className="ml-12 w-screen snap-y snap-mandatory !scroll-smooth bg-paleta-bege">
       {/* Homepage */}
-      <section className="flex h-screen snap-start snap-always flex-row gap-8 bg-[url('/bg1.png')] bg-cover bg-center px-16 py-24 text-paleta-marrom">
-        <div>
-          <FontAwesomeIcon
-            icon={faSeedling}
-            className="h-44 w-44"
-            style={{ color: "#795548" }}
-          ></FontAwesomeIcon>
-        </div>
-
+      <section className="flex h-screen snap-start snap-always flex-row gap-8 bg-[url('/bg1.png')] bg-cover bg-center px-48 py-24 text-paleta-marrom">
         <div className="flex flex-col justify-between">
           <div className="flex flex-col">
-            <h1 className="font-alt text-8xl font-bold text-paleta-verde">
-              EcoHub
-            </h1>
+            <div className="flex flex-row">
+              <h1 className="font-alt text-8xl font-bold text-paleta-verde">
+                EcoHub
+              </h1>
+              <LogoIcon altura={40} largura={40} />
+            </div>
+
             <h2 className="font-regular font-alt text-5xl">
               Juntos por um{" "}
               <span className="font-bold text-paleta-verde">mundo</span>
@@ -95,7 +91,7 @@ export default function Home() {
       </section>
 
       {/* Dicas sustentáveis */}
-      <section className="h-screen snap-start snap-always px-16 py-16">
+      <section className="h-screen snap-start snap-always px-14 py-12">
         <h1 className="font-alt text-3xl font-bold text-paleta-verde">
           Veja as notícias mais faladas!
         </h1>

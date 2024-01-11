@@ -1,60 +1,25 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faLeaf,
-  faUsers,
-  faCalendarDays,
-  faCartShopping,
-  faRightToBracket,
-  faPhone,
-  faSeedling,
-} from "@fortawesome/free-solid-svg-icons";
+import { HouseIcon } from "../../public/house";
+import { LeafIcon } from "../../public/leaf";
+import { UsersIcon } from "../../public/users";
+import { CalendarIcon } from "../../public/calendar-days";
+import { CartIcon } from "../../public/cart-shopping";
+import { EnterIcon } from "../../public/right-to-bracket";
+import { PhoneIcon } from "../../public/phone";
+import { LogoIcon } from "../../public/logo";
 
 export function Header() {
   return (
-    <header className="fixed bg-paleta-verde h-screen px-4 flex flex-col py-12 justify-between">
+    <header className="fixed flex h-screen flex-col justify-between bg-paleta-verde px-3 py-12">
       <div className="flex flex-col gap-4">
-        <FontAwesomeIcon
-          icon={faHouse}
-          className="w-8 h-8"
-          style={{ color: "#795548" }}
-        ></FontAwesomeIcon>
-        <FontAwesomeIcon
-          icon={faLeaf}
-          className="w-8 h-8"
-          style={{ color: "#795548" }}
-        ></FontAwesomeIcon>
-        <FontAwesomeIcon
-          icon={faUsers}
-          className="w-8 h-8"
-          style={{ color: "#795548" }}
-        ></FontAwesomeIcon>
-        <FontAwesomeIcon
-          icon={faCalendarDays}
-          className="w-8 h-8"
-          style={{ color: "#795548" }}
-        ></FontAwesomeIcon>
-        <FontAwesomeIcon
-          icon={faCartShopping}
-          className="w-8 h-8"
-          style={{ color: "#795548" }}
-        ></FontAwesomeIcon>
-        <FontAwesomeIcon
-          icon={faRightToBracket}
-          className="w-8 h-8"
-          style={{ color: "#795548" }}
-        ></FontAwesomeIcon>
-        <FontAwesomeIcon
-          icon={faPhone}
-          className="w-8 h-8"
-          style={{ color: "#795548" }}
-        ></FontAwesomeIcon>
+        <HouseIcon />
+        <LeafIcon />
+        <UsersIcon />
+        <CalendarIcon />
+        <CartIcon />
+        <EnterIcon />
+        <PhoneIcon />
       </div>
-      <FontAwesomeIcon
-        icon={faSeedling}
-        className="w-10 h-10"
-        style={{ color: "#795548" }}
-      ></FontAwesomeIcon>
+      <LogoIcon altura={24} largura={24} />
     </header>
   );
 }
