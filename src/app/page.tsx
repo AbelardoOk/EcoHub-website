@@ -1,11 +1,10 @@
 "use client";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSeedling } from "@fortawesome/free-solid-svg-icons";
-import { faUsers } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { LogoIcon } from "../../public/logo";
+import { UsersIcon } from "../../public/users";
+import { PlayAudio } from "@/components/playAudio";
 
 export default function Home() {
   const NewsApiKey = "75e8a105404542e3b22d5ad043445276";
@@ -38,10 +37,17 @@ export default function Home() {
     obterNoticias();
   }, []);
 
+  const clickSound = () => {
+    PlayAudio();
+  };
+
   return (
     <main className="ml-12 w-screen snap-y snap-mandatory !scroll-smooth bg-paleta-bege">
       {/* Homepage */}
-      <section className="flex h-screen snap-start snap-always flex-row gap-8 bg-[url('/bg1.png')] bg-cover bg-center px-48 py-24 text-paleta-marrom">
+      <section
+        id="home"
+        className="flex h-screen snap-start snap-always flex-row gap-8 bg-[url('/bg1.png')] bg-cover bg-center px-48 py-24 text-paleta-marrom"
+      >
         <div className="flex flex-col justify-between">
           <div className="flex flex-col">
             <div className="flex flex-row">
@@ -83,7 +89,10 @@ export default function Home() {
           </div>
 
           <div>
-            <button className="rounded-3xl bg-paleta-verde px-10 py-6 text-center text-3xl font-bold text-white">
+            <button
+              onClick={clickSound}
+              className="rounded-3xl bg-paleta-verde px-10 py-6 text-center text-3xl font-bold text-white shadow-[rgba(50,50,93,0.25)_0px_6px_12px_-2px,_rgba(0,0,0,0.3)_0px_3px_7px_-3px] transition-shadow duration-150 ease-in-out focus:bg-[#3E9041] focus:shadow-[inset_0px_0px_20px_10px_#357c38]"
+            >
               Descubra mais
             </button>
           </div>
@@ -91,7 +100,10 @@ export default function Home() {
       </section>
 
       {/* Dicas sustentáveis */}
-      <section className="h-screen snap-start snap-always px-14 py-12">
+      <section
+        id="dicas"
+        className="h-screen snap-start snap-always px-14 py-12"
+      >
         <h1 className="font-alt text-3xl font-bold text-paleta-verde">
           Veja as notícias mais faladas!
         </h1>
@@ -202,13 +214,12 @@ export default function Home() {
       </section>
 
       {/* comumunity */}
-      <section className="flex h-screen flex-row gap-8 bg-[url('/bg1.png')] bg-cover bg-center px-16 py-24 text-paleta-marrom">
+      <section
+        id="comunidade"
+        className="flex h-screen flex-row gap-8 bg-[url('/bg1.png')] bg-cover bg-center px-16 py-24 text-paleta-marrom"
+      >
         <div>
-          <FontAwesomeIcon
-            icon={faUsers}
-            className="h-44 w-44"
-            style={{ color: "#795548" }}
-          ></FontAwesomeIcon>
+          <UsersIcon altura={176} largura={176} />
         </div>
       </section>
     </main>
